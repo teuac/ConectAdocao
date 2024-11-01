@@ -1,0 +1,64 @@
+# Node modules
+node_modules/
+
+# Diretórios do iOS
+ios/build/
+ios/Pods/
+ios/*.xcworkspace
+ios/*.xcodeproj/project.xcworkspace/
+
+# Diretórios do Android
+android/.gradle/
+android/app/build/
+android/build/
+
+# Arquivos de configuração específicos da IDE
+.idea/
+.vscode/
+*.iml
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Cache do Metro Bundler
+.expo/
+.expo-shared/
+dist/
+web-build/
+.cache/
+
+# Expo ou outras configurações temporárias
+*.jsc
+*.expo*
+*.keystore
+
+# Test coverage
+coverage/
+
+# Output de build de debug
+*.bak
+*.tmp
+*.swp
+*.log
+
+# Diretórios de cache de pacotes
+package-lock.json
+yarn.lock
+
+# Outras opções de build de debug
+*.map
+*.log*
+
+# Arquivos de configuração e backups temporários
+*.swp
+*.swo
+*.backup
+
+# Arquivos temporários do Jest
+jest/
