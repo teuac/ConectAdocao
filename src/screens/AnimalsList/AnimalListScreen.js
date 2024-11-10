@@ -10,15 +10,15 @@ const animalsMock = [{
     age: '2 anos',
     specie: 'Dog',
     breed: 'Golden Retriever',
-    image: '/src/assets/animalPhotos/rex.jpeg',
+    image: require('../../assets/animalPhotos/rex.jpeg'),
   },
   {
     id: '2',
     name: 'Lucas',
     age: '40 anos',
     specie: 'Gatinho',
-    breed: 'Aquariano nato',
-    image: 'https://example.com/path/to/mia.jpg',
+    breed: 'viado',
+    image: require('../../assets/animalPhotos/lucas.jpg'),
   },]
 
 
@@ -30,7 +30,7 @@ const AnimalListScreen = ({ navigation }) => (
       keyExtractor={item => item.id}
       renderItem={({ item }) => (
         <AnimalCard onPress={() => navigation.navigate('AnimalDetails', { animal: item })}>
-          <AnimalImage source={{ uri: item.image }} />
+          <AnimalImage source={item.image } />
           <AnimalInfo>
             <AnimalName>{item.name}</AnimalName>
             <AnimalDetails>{item.age} - {item.breed}</AnimalDetails>
