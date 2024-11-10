@@ -8,6 +8,8 @@ import AnimalListScreen from './src/screens/AnimalsList/AnimalListScreen';
 import LoginScreen from './src/screens/Login/LoginScreen';
 import { AnimalDetails } from './src/screens/AnimalsList/style';
 import AnimalDetailsScreen from './src/screens/Details/AnimalDetailsScreen';
+import SignUpScreen from './src/screens/SignUp/SignUp';
+import AnimalAddScreen from './src/screens/AnimalAdd/AnimalAddScreen';
 
 
 
@@ -20,9 +22,11 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator initialRouteName='Login'>
         <Stack.Screen name="Login" component={LoginScreen} options={{headerShown: false}}/>
+        <Stack.Screen name="SignUp" component={SignUpScreen} options={{title: 'ConectAdoção'}}/>
         <Stack.Screen name="Home" component={HomeScreen} options={{title : 'ConectAdoção'}}/>
         <Stack.Screen name="AnimalList" component={AnimalListScreen} options={{title : 'ConectAdoção'}}/>
         <Stack.Screen name="AnimalDetails" component={AnimalDetailsScreen} options={{title: 'ConectAdoção'}}/>
+        <Stack.Screen name="AnimalAddScreen" component={AnimalAddScreen} options={{title: 'ConectAdoção'}}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

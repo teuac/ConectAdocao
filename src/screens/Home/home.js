@@ -12,7 +12,7 @@ const HomeScreen = ({ navigation }) => (
       <ButtonText>Ver Animais</ButtonText>
     </Button>
     <Title>Encontre um lar</Title>
-    <Button onPress={() => navigation.navigate('AnimalList')}>
+    <Button onPress={() => navigation.navigate('AnimalAddScreen')}>
       <ButtonText>Cadastrar Animal</ButtonText>
     </Button>
   </Container>

@@ -1,7 +1,8 @@
 // AnimalListScreen.js
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, AnimalCard, AnimalImage, AnimalName, AnimalInfo, AnimalDetails } from './style';
-import { FlatList} from 'react-native';
+import { FlatList, TouchableOpacity, Text} from 'react-native';
+import AnimalAddScreen from '../AnimalAdd/AnimalAddScreen';
 
 
 const animalsMock = [{
@@ -25,22 +26,40 @@ const animalsMock = [{
 
 
 
-const AnimalListScreen = ({ navigation }) => (
-  <Container>
-    <FlatList
-      data={animalsMock}
-      keyExtractor={item => item.id}
-      renderItem={({ item }) => (
-        <AnimalCard onPress={() => navigation.navigate('AnimalDetails', { animal: item })}>
-          <AnimalImage source={item.image } />
-          <AnimalInfo>
-            <AnimalName>{item.name}</AnimalName>
-            <AnimalDetails>{item.age} - {item.breed}</AnimalDetails>
-          </AnimalInfo>
-        </AnimalCard>
-      )}
-    />
-  </Container>
-);
-
-export default AnimalListScreen;
+  const AnimalListScreen = ({ navigation }) => {
+    const [animals, setAnimals] = useState(animalsMock);
+  
+    const addAnimal = (animal) => {
+      setAnimals([...animals, animal]);
+    };
+  
+    return (
+      <Container>
+        <FlatList
+          data={animalsMock}
+          keyExtractor={(item) => item.id}
+          renderItem={({ item }) => (
+            <AnimalCard onPress={() => navigation.navigate('AnimalDetails', { animal: item })}>
+              <AnimalImage source={item.image} />
+              <AnimalName>{item.name}</AnimalName>
+            </AnimalCard>
+          )}
+        />
+  
+        <TouchableOpacity
+          style={{
+            padding: 20,
+            backgroundColor: '#4caf50',
+            alignItems: 'center',
+            margin: 20,
+            borderRadius: 10,
+          }}
+          onPress={() => navigation.navigate('AnimalAddScreen', { AnimalAddScreen })}
+        >
+          <Text style={{ color: '#fff', fontSize: 18, fontWeight: 'bold' }}>Cadastrar Novo Animal</Text>
+        </TouchableOpacity>
+      </Container>
+    );
+  };
+  
+  export default AnimalListScreen;
