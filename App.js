@@ -5,6 +5,7 @@ import 'react-native-gesture-handler';
 
 import HomeScreen from './src/screens/Home/home';
 import AnimalListScreen from './src/screens/AnimalsList/AnimalListScreen';
+import LoginScreen from './src/screens/Login/LoginScreen';
 
 
 
@@ -15,7 +16,8 @@ export default function App() {
   
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='Home'>
+      <Stack.Navigator initialRouteName='Login'>
+        <Stack.Screen name="Login" component={LoginScreen}/>
         <Stack.Screen name="Home" component={HomeScreen} options={{title : 'ConectAdoção'}}/>
         <Stack.Screen name="AnimalList" component={AnimalListScreen} options={{title : 'ConectAdoção'}}/>
       </Stack.Navigator>
