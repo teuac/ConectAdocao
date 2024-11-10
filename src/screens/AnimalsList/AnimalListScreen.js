@@ -11,6 +11,7 @@ const animalsMock = [{
     specie: 'Dog',
     breed: 'Golden Retriever',
     image: require('../../assets/animalPhotos/rex.jpeg'),
+    description: "oii, sou o rex, me adote."
   },
   {
     id: '2',
@@ -19,6 +20,7 @@ const animalsMock = [{
     specie: 'Gatinho',
     breed: 'viado',
     image: require('../../assets/animalPhotos/lucas.jpg'),
+    description: 'louco para acasalar'
   },]
 
 

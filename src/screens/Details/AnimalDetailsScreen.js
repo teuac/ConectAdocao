@@ -53,8 +53,10 @@ const AnimalDetailsScreen = ({ route }) => {
     <Container>
       <AnimalImage source={animal.image} />
       <AnimalName>{animal.name}</AnimalName>
+      <AnimalDetailsText>Espécie: {animal.specie}</AnimalDetailsText>
       <AnimalDetailsText>Idade: {animal.age}</AnimalDetailsText>
       <AnimalDetailsText>Raça: {animal.breed}</AnimalDetailsText>
+
       <AnimalDetailsText>
         Descrição: {animal.description || 'Este animal é amigável e está pronto para encontrar um novo lar!'}
       </AnimalDetailsText>
