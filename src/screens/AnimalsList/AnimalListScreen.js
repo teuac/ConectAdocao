@@ -19,9 +19,9 @@ const animalsMock = [{
     name: 'Lucas',
     age: '40 anos',
     specie: 'Gatinho',
-    breed: 'viado',
+    breed: 'Aquariano',
     image: require('../../assets/animalPhotos/lucas.jpg'),
-    description: 'louco para acasalar'
+    description: 'oii me adote'
   },]
 
 
