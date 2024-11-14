@@ -103,12 +103,6 @@ Contribuições são bem-vindas! Se você deseja ajudar a melhorar o projeto, si
 
 ---
 
-## Licença
-
-Este projeto está licenciado sob a licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-
----
-
 ## Agradecimentos
 
 Agradecemos a todos os envolvidos e às ONGs e protetores de animais que participaram do processo de feedback e desenvolvimento. Sem o apoio da comunidade, este projeto não seria possível.
