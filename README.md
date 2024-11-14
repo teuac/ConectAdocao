@@ -1,1 +1,1 @@
-<H1>O que é o connect Adoção</H1>
+<H1>Connect Adoção</H1>
